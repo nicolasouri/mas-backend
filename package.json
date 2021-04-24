@@ -1,7 +1,7 @@
 {
   "name": "mas-backend",
   "version": "1.0.0",
-  "description": "api for web aplication",
+  "description": "API for web aplication",
   "main": "server.ts",
   "repository": "https://github.com/nicolasouri/mas-backend.git",
   "author": "Nicolas Ouriques",
