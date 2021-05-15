@@ -15,7 +15,7 @@ const routes = Router();
 routes.post('/user', userController.create);
 routes.post('/auth', authenticateController.create);
 routes.post('/courseunit', authenticated, courseUnitController.create);
-routes.post('/activy',authenticated, activyController.create);
+routes.post('/activy', authenticated, activyController.create);
 
     
 export default routes;
