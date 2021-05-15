@@ -3,7 +3,8 @@ import {v4 as uuid} from 'uuid'
 
 import { CourseUnit } from './CourseUnit';
 
-class Activy{
+@Entity("activities")
+class Activity{
 
     constructor(){
         if(!this.id){
@@ -23,10 +24,10 @@ class Activy{
     created_at: Date;
 
     @CreateDateColumn()
-    activy_date: Date
+    activity_date: Date
 
     @ManyToOne(() => CourseUnit, course_unit => course_unit.activies)
     course_unit: CourseUnit
 }
 
-export{Activy}
+export{Activity};
