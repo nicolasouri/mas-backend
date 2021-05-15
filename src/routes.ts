@@ -9,9 +9,11 @@ const activyController = new ActivyController();
 
 const routes = Router();
 
-routes.get('/user', userController.create)
-routes.post('/courseunit', courseUnitController.create);
-routes.post('/activy', activyController.create);
+
+routes.post('/user', userController.create);
+routes.post('/auth', authenticateController.create);
+routes.post('/courseunit', authenticated, courseUnitController.create);
+routes.post('/activy', authenticated, activyController.create);
     
 export default routes;
 //
