@@ -40,3 +40,4 @@ export class CreateActivities1619981564559 implements MigrationInterface {
     }
 
 }
+//
