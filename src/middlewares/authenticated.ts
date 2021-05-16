@@ -27,11 +27,7 @@ export default function authenticated(request:Request, response:Response, next:N
 
     const {sub, role} = verifyToken as Token
 
-<<<<<<< Updated upstream
-    request.body = {
-=======
     request.body.user = {
->>>>>>> Stashed changes
         id: sub,
         role: role
     }
