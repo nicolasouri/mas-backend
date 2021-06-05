@@ -21,15 +21,14 @@ export class CreateActivies1621103710899 implements MigrationInterface {
                         type:"varchar"
                     },
                     {
+                        name:"activity_date",
+                        type:"timestamp"
+                    },
+                    {
                         name:"created_at",
                         type:"timestamp",
                         default:"now()"
-                    },
-                    {
-                        name:"activity_date",
-                        type:"timestamp",
-                        default:"now()"
-                    }
+                    }  
                 ],
                 foreignKeys: [
                     {
