@@ -15,8 +15,8 @@ const routes = Router();
 routes.post('/auth', authenticateController.create);
 
 routes.post('/user', userController.create);
-routes.post('/courseunit', authenticated,  courseUnitController.create);
-routes.post('/activity', authenticated, activityController.create);
+routes.post('/courseunit', courseUnitController.create);
+routes.post('/activity', activityController.create);
 
 routes.get('/user', authenticated, userController.show);
 routes.get('/courseunit', authenticated, courseUnitController.show);
