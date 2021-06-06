@@ -24,7 +24,7 @@ class CourseUnit{
     created_at: Date
 
     @OneToMany(() => Activity, activity => activity.course_unit)
-    activies: Activity[]
+    activities: Activity[]
 }
 
 export{CourseUnit};
