@@ -19,7 +19,7 @@ export default function authenticated(request:Request, response:Response, next:N
 
     const [, token] = headerAuthorization.split(' ');
 
-    const verifyToken = verify(token, authConfig.jwt.secret);
+    const verifyToken = verify(token, authConfig.jwt.publicKey);
 
     if(!verifyToken){
         throw new Error()
@@ -27,7 +27,7 @@ export default function authenticated(request:Request, response:Response, next:N
 
     const {sub, role} = verifyToken as Token
 
-    request.body.user = {
+    request.body.user = {   
         id: sub,
         role: role
     }

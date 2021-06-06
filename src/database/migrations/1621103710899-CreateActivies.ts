@@ -5,37 +5,41 @@ export class CreateActivies1621103710899 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "activities",
-                columns:[
+                name:"activities",
+                columns: [
                     {
                         name:"id",
                         type:"varchar",
-                        isPrimary: true
+                        isPrimary: true,
                     },
                     {
                         name:"name",
-                        type:"varchar"
-                    },
-                    {
-                        name:"course_unit_id",
-                        type:"varchar"
+                        type:"varchar",
                     },
                     {
                         name:"activity_date",
-                        type:"timestamp"
+                        type:"timestamp",
+                    },
+                    {
+                        name:"grade",
+                        type:"decimal",
+                    },
+                    {
+                        name:"courseUnitId",
+                        type:"varchar",
                     },
                     {
                         name:"created_at",
                         type:"timestamp",
-                        default:"now()"
-                    }  
+                        default:"now()",
+                    }
                 ],
                 foreignKeys: [
                     {
                         name:'ActivityCourseUnit',
-                        referencedTableName: 'course_units',
+                        referencedTableName:'course_units',
                         referencedColumnNames: ['id'],
-                        columnNames: ['course_unit_id']
+                        columnNames: ['courseUnitId']
                     }
                 ]
             })
